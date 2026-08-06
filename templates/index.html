@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Emergency AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        body{
+            font-family:'Poppins',sans-serif;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+            overflow:hidden;
+        }
+
+        .hero-card{
+            width:90%;
+            max-width:750px;
+            text-align:center;
+            padding:60px 45px;
+            border-radius:30px;
+            background:rgba(255,255,255,0.08);
+            border:1px solid rgba(255,255,255,0.15);
+            backdrop-filter:blur(18px);
+            box-shadow:0 25px 60px rgba(0,0,0,0.35);
+            position:relative;
+        }
+
+        .hero-card::before{
+            content:"";
+            position:absolute;
+            top:-60px;
+            right:-60px;
+            width:180px;
+            height:180px;
+            background:rgba(59,130,246,0.25);
+            border-radius:50%;
+            filter:blur(10px);
+        }
+
+        .hero-card::after{
+            content:"";
+            position:absolute;
+            bottom:-70px;
+            left:-70px;
+            width:220px;
+            height:220px;
+            background:rgba(6,182,212,0.18);
+            border-radius:50%;
+            filter:blur(10px);
+        }
+
+        .hero-icon{
+            font-size:78px;
+            margin-bottom:20px;
+            position:relative;
+            z-index:1;
+        }
+
+        .hero-card h1{
+            font-size:3.2rem;
+            margin-bottom:18px;
+            position:relative;
+            z-index:1;
+        }
+
+        .subtitle{
+            font-size:1.08rem;
+            line-height:1.8;
+            color:#e2e8f0;
+            margin-bottom:35px;
+            position:relative;
+            z-index:1;
+        }
+
+        .feature-list{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:15px;
+            margin-bottom:38px;
+            position:relative;
+            z-index:1;
+        }
+
+        .feature{
+            background:rgba(255,255,255,0.12);
+            padding:12px 20px;
+            border-radius:999px;
+            color:white;
+            font-size:.95rem;
+            border:1px solid rgba(255,255,255,0.1);
+        }
+
+        .launch-btn{
+            display:inline-block;
+            padding:15px 32px;
+            border-radius:18px;
+            text-decoration:none;
+            color:white;
+            font-weight:600;
+            font-size:1rem;
+            background:linear-gradient(135deg,#06b6d4,#2563eb);
+            transition:all .25s ease;
+            position:relative;
+            z-index:1;
+            box-shadow:0 12px 30px rgba(37,99,235,.35);
+        }
+
+        .launch-btn:hover{
+            transform:translateY(-3px) scale(1.02);
+            box-shadow:0 16px 38px rgba(37,99,235,.5);
+        }
+
+        @media(max-width:768px){
+            .hero-card{
+                padding:45px 24px;
+            }
+
+            .hero-card h1{
+                font-size:2.3rem;
+            }
+
+            .subtitle{
+                font-size:1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero-card">
+        <div class="hero-icon">🛡️</div>
+
+        <h1>Smart Emergency AI</h1>
+
+        <p class="subtitle">
+            AI-powered accident detection, real-time GPS tracking,
+            and instant emergency response system designed to provide
+            faster medical assistance and improve public safety.
+        </p>
+
+        <div class="feature-list">
+            <div class="feature">📍 Live GPS Tracking</div>
+            <div class="feature">🚑 Emergency Alerts</div>
+            <div class="feature">🤖 AI Detection</div>
+            <div class="feature">🩺 Smart Healthcare</div>
+        </div>
+
+        <a href="/dashboard" class="launch-btn">
+            Launch Dashboard →
+        </a>
+    </section>
+
+</body>
+</html>
